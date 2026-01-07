@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inventory & Sales Management System
 
-## Getting Started
+Project ini adalah aplikasi Inventory & Sales berbasis web yang dibangun menggunakan Next.js App Router.  
+Digunakan sebagai project belajar sekaligus portofolio level intermediate.
 
-First, run the development server:
+## Tech Stack
+- Next.js App Router
+- Prisma ORM
+- MySQL
+- Tailwind CSS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Fitur Saat Ini
+- Setup Next.js App Router
+- Styling dengan Tailwind CSS
+- Prisma schema dan migrasi database
+- Koneksi MySQL
+- Halaman login
+- Login logic menggunakan Prisma
+- Session login berbasis cookie httpOnly
+- Proteksi route dashboard dengan middleware
+- Seed user untuk testing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Struktur Utama
+- `(auth)` untuk halaman login
+- `(dashboard)` untuk halaman sistem utama
+- `middleware.ts` untuk proteksi route
+- `lib/prisma.ts` untuk Prisma Client
+- `lib/session.ts` untuk session handling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cara Menjalankan Project
+1. Clone repository
+2. Install dependency
+   ```bash
+   npm install
+3. Atur database di .env "DATABASE_URL=mysql://user:password@localhost:3306/invent_sales"
+4. jalankan migrasi
+    npx prisma migrate dev
+    npx prisma generate
+5. jalankan server
+    npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Akun Testing
 
-## Learn More
+Email: admin@mail.com
 
-To learn more about Next.js, take a look at the following resources:
+Password: admin123
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Status Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Project berada pada tahap intermediate dan siap dikembangkan ke fitur inventory, stok, dan transaksi penjualan.
 
-## Deploy on Vercel
+## Rencana Pengembangan
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Hash password
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Logout
+
+- Role admin dan staff
+
+- CRUD kategori dan produk
+
+- Manajemen stok
+
+- Transaksi penjualan
+
+- Dashboard laporan
