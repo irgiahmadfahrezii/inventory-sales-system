@@ -1,9 +1,11 @@
-export default function Home() {
+import { prisma } from "@/lib/prisma";
+
+export default async function Home() {
+  const categories = await prisma.category.findMany();
+
   return (
     <div className="p-10">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Inventory & Sales System
-      </h1>
+      <pre>{JSON.stringify(categories, null, 2)}</pre>
     </div>
   );
 }
