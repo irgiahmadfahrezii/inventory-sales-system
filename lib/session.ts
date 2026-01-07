@@ -14,5 +14,5 @@ export function getSession() {
 }
 
 export function clearSession() {
-  cookies().delete(SESSION_KEY);
+  cookies().delete(SESSION_KEY); 
 }
