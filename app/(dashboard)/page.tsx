@@ -1,8 +1,10 @@
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
+import LogoutButton from "./dashboard/logout-button";
 
-export default function DashboardPage() {
+
+export default async function DashboardPage() {
     const userId = getSession() ;
 
     if(!userId){
@@ -19,6 +21,8 @@ export default function DashboardPage() {
             Dashboard
         </h1>
         <p>Halo, {user?.name}</p>
+
+        <LogoutButton />
     </div>
     );
 }

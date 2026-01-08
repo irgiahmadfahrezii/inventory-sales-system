@@ -53,8 +53,6 @@ Project berada pada tahap intermediate dan siap dikembangkan ke fitur inventory,
 
 - Hash password
 
-- Logout
-
 - Role admin dan staff
 
 - CRUD kategori dan produk
@@ -64,3 +62,26 @@ Project berada pada tahap intermediate dan siap dikembangkan ke fitur inventory,
 - Transaksi penjualan
 
 - Dashboard laporan
+
+## Perbaikan Session Next.js 16
+- `cookies()` bersifat async pada Next.js 16.
+- Helper session menggunakan `await cookies()`.
+- Session hanya dibaca di Server Component.
+- Cookie diset dan dihapus melalui API Route.
+- Tidak menggunakan Server Action untuk session.
+
+
+### Update 8 Januari 2026
+
+## Implementasi Login Final
+- Login menggunakan Client Component.
+- Autentikasi melalui Route Handler `/api/login`.
+- Cookie session diset menggunakan NextResponse.
+- Tidak menggunakan Server Action untuk session.
+
+
+## Implementasi Logout dan Dashboard
+- Dashboard menggunakan Server Component.
+- Session dicek di server sebelum render.
+- Data user diambil menggunakan Prisma.
+- Logout di-handle oleh Client Component melalui API.
