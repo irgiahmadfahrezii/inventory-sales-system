@@ -85,3 +85,11 @@ Project berada pada tahap intermediate dan siap dikembangkan ke fitur inventory,
 - Session dicek di server sebelum render.
 - Data user diambil menggunakan Prisma.
 - Logout di-handle oleh Client Component melalui API.
+
+
+## CRUD Category
+- Halaman kategori di `/dashboard/categories`.
+- Create dan delete kategori menggunakan Server Action.
+- Data diambil langsung dari Prisma.
+- Halaman dilindungi session login.
+- Menggunakan `revalidatePath` untuk update data.

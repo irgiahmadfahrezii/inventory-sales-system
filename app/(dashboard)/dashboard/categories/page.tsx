@@ -22,7 +22,7 @@ export default async function CategoriesPage() {
 
       <form action={createCategory} className="flex gap-2 mb-6">
         <input
-          name="fill_name"
+          name="fill_name_cat"
           placeholder="Nama kategori"
           className="flex-1 border px-3 py-2 rounded"
         />
